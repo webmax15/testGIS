@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfTestGIS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTestGIS"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="470" Width="600" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox x:Name="txtBoxFile" HorizontalAlignment="Left" Height="23" Margin="26,25,0,0" TextWrapping ="NoWrap" 
+                 VerticalAlignment="Top" Width="387" KeyDown="txtBoxFile_KeyDown"/>
+        <Button x:Name="butOverview" Content="Обзор" HorizontalAlignment="Left" Margin="459,25,0,0" VerticalAlignment="Top" Width="107"
+                Click="butOverview_Click"/>
+        <Viewbox Width="540" Height="320" Margin="0,50,0,0"> <!--Выбрал этот элемент, из стандартных элементов, на мой взгляд, 
+            самый подходящий. А нагуглить чего другого и лучше не вышло-->
+            <Canvas x:Name="canvas" Width="540" Height="320">
+            </Canvas>
+        </Viewbox>
+        <TextBox Background="#FFB8B8B8" Name="TxtBoxState" VerticalAlignment="Bottom" Height="20" IsReadOnly="True"/>
+    </Grid>
+</Window>
